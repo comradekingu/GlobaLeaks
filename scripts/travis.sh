@@ -10,7 +10,7 @@ setupClientDependencies() {
   cd $TRAVIS_BUILD_DIR/client  # to install frontend dependencies
   npm install -g grunt grunt-cli bower
   npm install -d
-  grunt setupDependencies
+  bower update
   ./node_modules/protractor/bin/webdriver-manager update
   if [ "$1" = 1 ]; then
     grunt build
